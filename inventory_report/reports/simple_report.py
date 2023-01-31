@@ -3,8 +3,8 @@ from collections import Counter
 
 
 class SimpleReport:
-    @staticmethod
-    def generate(lista):
+    @classmethod
+    def generate(cls, lista):
         now = str(date.today())
 
         company = [item["nome_da_empresa"] for item in lista]
@@ -27,4 +27,10 @@ class SimpleReport:
             f"Data de validade mais próxima: {next_expired_date}\n"
             f"Empresa com mais produtos: {count_company}"
         )
+
+    @classmethod
+    def get_company(cls, list):
+        company = [item["nome_da_empresa"] for item in list]
+        return Counter(company)
+        
     pass
