@@ -13,9 +13,7 @@ class CompleteReport(SimpleReport):
 
         companies = cls.get_company(list)
         # print(companies.items())
-        # separou por par e feito um for
         simple_report += "\nProdutos estocados por empresa:\n"
         for company, qnty in companies.items():
             simple_report += f"- {company}: {qnty}\n"
-        print(simple_report)
         return simple_report
