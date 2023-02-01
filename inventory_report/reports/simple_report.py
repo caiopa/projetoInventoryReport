@@ -32,5 +32,3 @@ class SimpleReport:
     def get_company(cls, list):
         company = [item["nome_da_empresa"] for item in list]
         return Counter(company)
-        
-    pass
